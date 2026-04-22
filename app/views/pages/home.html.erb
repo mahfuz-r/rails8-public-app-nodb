@@ -1,9 +1,204 @@
-<div class="p-4">
-  <h1 class="text-xl mb-2">Rails8 app - nodb</h1>
-  <div>ruby => 3.4.3</div>
-  <div class="mb-2">rails => 8.0.2</div>
-  <div class="mb-2">Home page</div>
-  <div>branch: main</div>
-  <div style="margin-bottom:5px;">Time: <%= Time.current %></div>
-  <div>Environment: <%= ENV['RAILS_ENV'] %></div>
-</div>
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>🚀 Modern PaaS Platform</span>
+      </div>
+      <h1 class="hero-title">Deploy Your Apps in <span class="highlight">Seconds</span>, Not Days</h1>
+      <p class="hero-description">
+        FrogLoops is the developer-friendly Platform as a Service that handles infrastructure, scaling, and deployment so you can focus on building amazing applications.
+      </p>
+      <div class="hero-actions">
+        <a href="#signup" class="btn btn-primary btn-large">Start Free Trial</a>
+        <a href="#demo" class="btn btn-outline btn-large">Watch Demo →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">99.9%</span>
+          <span class="stat-label">Uptime SLA</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">⚡</span>
+          <span class="stat-label">Global Edge Network</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">∞</span>
+          <span class="stat-label">Auto-scaling</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">🐸</span>
+          <span class="stat-label">Developer First</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-window">
+        <div class="code-header">
+          <div class="code-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="code-title">deploy.yml</div>
+        </div>
+        <pre class="code-content"><code># Deploy your app with one command
+frogloops deploy
+
+# Or use our GitHub Action
+- name: Deploy to FrogLoops
+  uses: frogloops/deploy-action@v2
+  with:
+    api-key: ${{ secrets.FROGLOOPS_API_KEY }}
+    project: my-awesome-app</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Everything You Need to Scale</h2>
+      <p class="section-description">
+        From prototype to production, FrogLoops provides the complete platform for modern applications.
+      </p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🚀</div>
+        <h3 class="feature-title">Instant Deployments</h3>
+        <p class="feature-description">
+          Push to Git and we handle the rest. Automatic builds, testing, and deployment to our global network.
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <h3 class="feature-title">Smart Auto-scaling</h3>
+        <p class="feature-description">
+          Your apps scale automatically based on traffic. Pay only for what you use with per-second billing.
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3 class="feature-title">Enterprise Security</h3>
+        <p class="feature-description">
+          Built-in DDoS protection, SSL certificates, and compliance with SOC2, GDPR, and HIPAA standards.
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <h3 class="feature-title">Global Edge Network</h3>
+        <p class="feature-description">
+          Deploy to 50+ regions worldwide. Your users get low latency no matter where they are.
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🔄</div>
+        <h3 class="feature-title">Zero-downtime Updates</h3>
+        <p class="feature-description">
+          Roll out new versions without interrupting service. Built-in rollback and canary deployments.
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🔧</div>
+        <h3 class="feature-title">Developer Tools</h3>
+        <p class="feature-description">
+          CLI, API, GitHub Actions, and comprehensive documentation. Integrates with your existing workflow.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Simple, Transparent Pricing</h2>
+      <p class="section-description">
+        Start for free, scale as you grow. No hidden fees or surprise charges.
+      </p>
+    </div>
+    
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3 class="pricing-title">Hobby</h3>
+          <div class="pricing-price">
+            <span class="price-amount">$0</span>
+            <span class="price-period">/month</span>
+          </div>
+          <p class="pricing-description">Perfect for side projects and experiments</p>
+        </div>
+        <ul class="pricing-features">
+          <li>✓ 1 project</li>
+          <li>✓ 512MB RAM</li>
+          <li>✓ 1GB storage</li>
+          <li>✓ Custom domains</li>
+          <li>✓ Basic analytics</li>
+        </ul>
+        <a href="#signup" class="btn btn-outline btn-block">Get Started</a>
+      </div>
+      
+      <div class="pricing-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <div class="pricing-header">
+          <h3 class="pricing-title">Pro</h3>
+          <div class="pricing-price">
+            <span class="price-amount">$25</span>
+            <span class="price-period">/month</span>
+          </div>
+          <p class="pricing-description">For growing startups and businesses</p>
+        </div>
+        <ul class="pricing-features">
+          <li>✓ 10 projects</li>
+          <li>✓ 4GB RAM</li>
+          <li>✓ 20GB storage</li>
+          <li>✓ Auto-scaling</li>
+          <li>✓ Advanced analytics</li>
+          <li>✓ Priority support</li>
+        </ul>
+        <a href="#signup" class="btn btn-primary btn-block">Start Free Trial</a>
+      </div>
+      
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3 class="pricing-title">Enterprise</h3>
+          <div class="pricing-price">
+            <span class="price-amount">Custom</span>
+          </div>
+          <p class="pricing-description">For large-scale applications</p>
+        </div>
+        <ul class="pricing-features">
+          <li>✓ Unlimited projects</li>
+          <li>✓ Dedicated infrastructure</li>
+          <li>✓ SLA guarantee</li>
+          <li>✓ Custom contracts</li>
+          <li>✓ 24/7 phone support</li>
+          <li>✓ Security audit</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline btn-block">Contact Sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">Ready to Deploy?</h2>
+      <p class="cta-description">
+        Join thousands of developers who trust FrogLoops with their applications.
+      </p>
+      <div class="cta-actions">
+        <a href="#signup" class="btn btn-primary btn-large">Get Started Free</a>
+        <p class="cta-note">No credit card required • Free tier includes 1 project</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= content_for(:title) || "Rails8 App Nodb" %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for(:title) || "FrogLoops - Modern PaaS Platform" %></title>
+    <meta name="description" content="Deploy, scale, and manage your applications with FrogLoops - the modern Platform as a Service built for developers.">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
@@ -20,9 +22,132 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+    <header class="navbar" data-controller="mobile-menu">
+      <div class="container">
+        <div class="navbar-content">
+          <a href="/" class="logo">
+            <span class="logo-icon">🐸</span>
+            <span class="logo-text">FrogLoops</span>
+          </a>
+          
+          <nav class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#docs">Docs</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          
+          <div class="nav-actions">
+            <a href="#login" class="btn btn-outline">Sign In</a>
+            <a href="#signup" class="btn btn-primary">Get Started Free</a>
+          </div>
+          
+          <button class="mobile-menu-toggle" 
+                  data-action="click->mobile-menu#toggle"
+                  data-mobile-menu-target="toggle"
+                  aria-label="Toggle menu"
+                  aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden" data-mobile-menu-target="menu">
+          <nav class="nav-links">
+            <a href="#features" data-action="click->mobile-menu#close">Features</a>
+            <a href="#pricing" data-action="click->mobile-menu#close">Pricing</a>
+            <a href="#docs" data-action="click->mobile-menu#close">Docs</a>
+            <a href="#blog" data-action="click->mobile-menu#close">Blog</a>
+            <a href="#contact" data-action="click->mobile-menu#close">Contact</a>
+          </nav>
+          
+          <div class="nav-actions">
+            <a href="#login" class="btn btn-outline" data-action="click->mobile-menu#close">Sign In</a>
+            <a href="#signup" class="btn btn-primary" data-action="click->mobile-menu#close">Get Started Free</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <%= yield %>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <span class="logo-icon">🐸</span>
+              <span class="logo-text">FrogLoops</span>
+            </div>
+            <p class="footer-description">
+              The modern Platform as a Service built for developers who want to focus on building, not infrastructure.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="GitHub">🐙</a>
+              <a href="#" aria-label="Twitter">🐦</a>
+              <a href="#" aria-label="LinkedIn">💼</a>
+              <a href="#" aria-label="Discord">🎮</a>
+            </div>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Product</h3>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#use-cases">Use Cases</a></li>
+              <li><a href="#roadmap">Roadmap</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Developers</h3>
+            <ul>
+              <li><a href="#docs">Documentation</a></li>
+              <li><a href="#api">API Reference</a></li>
+              <li><a href="#guides">Guides</a></li>
+              <li><a href="#status">Status</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#careers">Careers</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#privacy">Privacy Policy</a></li>
+              <li><a href="#terms">Terms of Service</a></li>
+              <li><a href="#security">Security</a></li>
+              <li><a href="#cookies">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; <%= Time.current.year %> FrogLoops, Inc. All rights reserved.</p>
+          <p>Deploying to <strong>frogloops.com</strong></p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
