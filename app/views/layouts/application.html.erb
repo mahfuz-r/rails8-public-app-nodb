@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for(:title) || "FrogLoops - Modern PaaS Platform" %></title>
-    <meta name="description" content="Deploy, scale, and manage your applications with FrogLoops - the modern Platform as a Service built for developers.">
+    <title><%= content_for(:title) || "Demo App - Deployed on FrogLoops" %></title>
+    <meta name="description" content="This demo application is deployed on frogloops.com - a modern Platform as a Service for developers.">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
@@ -33,21 +33,18 @@
       <div class="container">
         <div class="navbar-content">
           <a href="/" class="logo">
-            <span class="logo-icon">🐸</span>
-            <span class="logo-text">FrogLoops</span>
+            <span class="logo-icon">🚀</span>
+            <span class="logo-text">Demo App</span>
           </a>
           
           <nav class="nav-links">
             <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#docs">Docs</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
+            <a href="#demo">Demo</a>
+            <a href="#deploy">Deploy</a>
           </nav>
           
           <div class="nav-actions">
-            <a href="#login" class="btn btn-outline">Sign In</a>
-            <a href="#signup" class="btn btn-primary">Get Started Free</a>
+            <a href="https://frogloops.com" target="_blank" class="btn btn-primary">Deploy on FrogLoops</a>
           </div>
           
           <button class="mobile-menu-toggle" 
@@ -65,15 +62,12 @@
         <div class="mobile-menu hidden" data-mobile-menu-target="menu">
           <nav class="nav-links">
             <a href="#features" data-action="click->mobile-menu#close">Features</a>
-            <a href="#pricing" data-action="click->mobile-menu#close">Pricing</a>
-            <a href="#docs" data-action="click->mobile-menu#close">Docs</a>
-            <a href="#blog" data-action="click->mobile-menu#close">Blog</a>
-            <a href="#contact" data-action="click->mobile-menu#close">Contact</a>
+            <a href="#demo" data-action="click->mobile-menu#close">Demo</a>
+            <a href="#deploy" data-action="click->mobile-menu#close">Deploy</a>
           </nav>
           
           <div class="nav-actions">
-            <a href="#login" class="btn btn-outline" data-action="click->mobile-menu#close">Sign In</a>
-            <a href="#signup" class="btn btn-primary" data-action="click->mobile-menu#close">Get Started Free</a>
+            <a href="https://frogloops.com" target="_blank" class="btn btn-primary" data-action="click->mobile-menu#close">Deploy on FrogLoops</a>
           </div>
         </div>
       </div>
